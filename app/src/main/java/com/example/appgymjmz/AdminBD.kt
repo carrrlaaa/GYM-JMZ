@@ -15,6 +15,15 @@ class AdminBD(context: Context): SQLiteOpenHelper(context,"clientesgym",null,1) 
                 "nomCliente TEXT," +
                 "telCliente INTEGER," +
                 "fechaPago DATE)")
+        bd?.execSQL("Create Table cuentaUsr(" +
+                "corrUsr TEXT NOT NULL primary key,"+
+                "nomUsr TEXT,"+
+                "pwdUsr TEXT)")
+        bd?.execSQL("Create Table tipoPago(" +
+                "idPago INTEGER NOT NULL primary key,"+
+                "nomPago TEXT," +
+                "precio INTEGER)")
+
     }
 
     // Permite ejecutar Insert, Update o Delete
