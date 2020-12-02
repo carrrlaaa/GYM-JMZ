@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                             admin.Ejecuta(sentencia)
                         }
                     Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
-                    val act = Intent(this, ClientesActi::class.java)
+                    val act = Intent(this, ClienteActi::class.java)
                     startActivity(act)
 
 
