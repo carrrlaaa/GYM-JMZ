@@ -4,26 +4,24 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import java.lang.Exception
 
 class AdminBD(context: Context): SQLiteOpenHelper(context,"clientesgym",null,1) {
     override fun onCreate(bd: SQLiteDatabase?) {
         bd?.execSQL("Create Table Clientes(" +
-                "corrUsr TEXT NOT NULL foreign key,"+
-                "idCliente INTEGER NOT NULL primary key," +
-                "idPago INTEGER NOT NULL foreign key,"+
+                "corrUsr TEXT,"+
+                "idCliente INTEGER primary key," +
+                "idPago INTEGER,"+
                 "nomCliente TEXT," +
                 "telCliente INTEGER," +
                 "fechaPago DATE)")
         bd?.execSQL("Create Table cuentaUsr(" +
-                "corrUsr TEXT NOT NULL primary key,"+
+                "corrUsr TEXT primary key,"+
                 "nomUsr TEXT,"+
                 "pwdUsr TEXT)")
         bd?.execSQL("Create Table tipoPago(" +
-                "idPago INTEGER NOT NULL primary key,"+
+                "idPago INTEGER primary key,"+
                 "nomPago TEXT," +
                 "precio INTEGER)")
-
     }
 
     // Permite ejecutar Insert, Update o Delete
@@ -40,12 +38,11 @@ class AdminBD(context: Context): SQLiteOpenHelper(context,"clientesgym",null,1) 
     }
 
     // Permir ejecutar una consulta
-    fun Consulta(query: String):Cursor?{
+    fun Consulta(select: String):Cursor?{
         try {
             val bd = this.readableDatabase
-            return bd.rawQuery(query,null)
-        }
-        catch (ex:Exception){
+            return bd.rawQuery(select, null)
+        } catch (ex: Exception) {
             return null
         }
     }

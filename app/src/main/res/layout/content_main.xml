@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C9081E97"
+    android:background="#081D93"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="88dp"
         android:text="Bienvenido!"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
@@ -26,8 +26,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Ingrese sus datos "
+        android:layout_marginTop="16dp"
+        android:text="Ingrese a su cuenta"
         android:textColor="#D6D4D4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.186"
@@ -53,40 +53,14 @@
         android:id="@+id/etPwdUsr"
         android:layout_width="296dp"
         android:layout_height="42dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Ingrese su Contraseña"
         android:inputType="textPassword"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNomUsr" />
-
-    <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Registrar"
-        android:onClick="btnRegistrar_clic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPwdUsr" />
-
-    <EditText
-        android:id="@+id/etNomUsr"
-        android:layout_width="293dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="Ingrese su Nombre "
-        android:inputType="textPersonName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCorrUsr" />
 

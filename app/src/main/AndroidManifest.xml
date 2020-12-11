@@ -12,19 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ClienteActi"></activity>
+        <activity android:name=".PagProm32"
+            android:parentActivityName=".Clientes"></activity>
         <activity
-            android:name=".ClientesActi"
+            android:name=".PagPromoEstu"
+            android:parentActivityName=".Clientes" />
+        <activity
+            android:name=".PagSem"
+            android:parentActivityName=".Clientes" />
+        <activity
+            android:name=".PagMes"
+            android:parentActivityName=".Clientes" />
+        <activity
+            android:name=".Clientes"
             android:label="@string/title_activity_clientes"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivityNuevoUsuario" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ValidacionRes" />
+        <activity
+            android:name=".MainActivityAgregarCli"
+            android:parentActivityName=".Clientes"
+            android:label="@string/title_activity_clientes"
+            android:theme="@style/AppTheme.NoActionBar"  />
     </application>
 
 </manifest>

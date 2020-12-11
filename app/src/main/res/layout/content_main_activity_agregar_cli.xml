@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E832BA37"
+    tools:context=".MainActivityAgregarCli">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Cliente Nuevo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomCli"
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Nombre Completo"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/etTelCli"
+        android:layout_width="260dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Telefono"
+        android:inputType="number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNomCli" />
+
+    <EditText
+        android:id="@+id/etFec"
+        android:layout_width="256dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Fecha de Vencimiento"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTelCli" />
+
+    <RadioGroup
+        android:id="@+id/rgPago"
+        android:layout_width="215dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFec">
+
+        <RadioButton
+            android:id="@+id/rbMes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensualidad" />
+
+        <RadioButton
+            android:id="@+id/rbSem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Semana" />
+
+        <RadioButton
+            android:id="@+id/rbDia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dia" />
+
+        <RadioButton
+            android:id="@+id/rbProEstu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Promo Estudiante" />
+
+        <RadioButton
+            android:id="@+id/rbPro3x2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Promo 3x2" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
